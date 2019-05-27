@@ -69,7 +69,8 @@ namespace TeaBagMaker
             {
                 this.timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "알림",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);\
+                this.cbTea.Focus();
             }
             else
             {
