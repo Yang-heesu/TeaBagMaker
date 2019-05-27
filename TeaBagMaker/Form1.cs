@@ -41,10 +41,16 @@ namespace TeaBagMaker
         {
             this.selectedTea = this.cbTea.Text;
 
+            InputValue();
+
+        }
+
+        private void InputValue()
+        {
             if (selectedTea.Equals("홍차") || this.cbTea.Text.Equals("국화차"))
             {
                 this.lblCount.Text = "2분";
-                this.countTime = 60 * 60 * 2;
+                this.countTime = 10;
             }
             else if (selectedTea.Equals("녹차"))
             {
@@ -56,6 +62,7 @@ namespace TeaBagMaker
                 this.lblCount.Text = "5분";
                 this.countTime = 60 * 60 * 5;
             }
+
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -69,7 +76,8 @@ namespace TeaBagMaker
             {
                 this.timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "알림",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);\
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InputValue();
                 this.cbTea.Focus();
             }
             else
