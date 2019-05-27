@@ -87,6 +87,7 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.cbTea);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
